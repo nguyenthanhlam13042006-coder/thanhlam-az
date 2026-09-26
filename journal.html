@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nhật Ký Học Tập & Sáng Tác | Nguyễn Thị Thanh Lam — Thanh Lam Luxury</title>
+  <meta name="description" content="Nhật ký học tập, ghi chép hành trình thực hiện đồ án website thời trang Thanh Lam Luxury, bài học nhóm, kỹ năng giao tiếp và phát triển bản thân của Nguyễn Thị Thanh Lam.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' font-family='serif'>TL</text></svg>">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <a href="index.html" class="header-logo">
+      THANH LAM
+      <span class="brand-sub">Thương hiệu thời trang độc lập</span>
+    </a>
+
+    <nav class="header-nav">
+      <a href="index.html" class="nav-link">Trang Chủ</a>
+      <a href="collection.html" class="nav-link">Bộ Sưu Tập</a>
+      <a href="lookbook.html" class="nav-link">Lookbook</a>
+      <a href="projects.html" class="nav-link">Dự Án</a>
+      <a href="about.html" class="nav-link">Về Tôi</a>
+      <a href="journal.html" class="nav-link active">Nhật Ký</a>
+      <a href="contact.html" class="nav-link">Liên Hệ</a>
+    </nav>
+
+    <div class="header-actions">
+      <a href="https://instagram.com" target="_blank" rel="noopener" class="social-pill">IG</a>
+      <a href="https://tiktok.com" target="_blank" rel="noopener" class="social-pill">TT</a>
+      <button class="mobile-menu-btn" id="openMenuBtn" aria-label="Mở menu">MENU</button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-overlay" id="mobileOverlay"></div>
+  <aside class="mobile-drawer" id="mobileDrawer">
+    <button class="drawer-close" id="closeMenuBtn" aria-label="Đóng menu">&times;</button>
+    <nav class="drawer-links">
+      <a href="index.html" class="drawer-link">01. Trang Chủ</a>
+      <a href="collection.html" class="drawer-link">02. Bộ Sưu Tập</a>
+      <a href="lookbook.html" class="drawer-link">03. Lookbook</a>
+      <a href="projects.html" class="drawer-link">04. Dự Án</a>
+      <a href="about.html" class="drawer-link">05. Về Tôi</a>
+      <a href="journal.html" class="drawer-link">06. Nhật Ký</a>
+      <a href="contact.html" class="drawer-link">07. Liên Hệ</a>
+    </nav>
+  </aside>
+
+  <!-- Subpage Hero -->
+  <header class="subpage-hero">
+    <span class="subpage-tag">HÀNH TRÌNH ĐỒ ÁN & HỌC TẬP / PROJECT JOURNAL & LEARNING LOG</span>
+    <h1 class="subpage-title">NHẬT KÝ SÁNG TÁC & HỌC TẬP</h1>
+    <p class="subpage-desc">
+      &ldquo;Không gian lưu giữ những chiêm nghiệm thực tế, bài học từ các bài tập nhóm, tư duy thương mại điện tử và sự nỗ lực trưởng thành của sinh viên Nguyễn Thị Thanh Lam trong quá trình phát triển đồ án website Thanh Lam Luxury.&rdquo;
+    </p>
+  </header>
+
+  <!-- Subpage Main Content -->
+  <main class="subpage-content">
+
+    <!-- Category Filter Bar -->
+    <nav class="journal-filter-nav" aria-label="Bộ lọc chủ đề nhật ký">
+      <button type="button" class="journal-filter-btn active" data-filter="all">Tất Cả (05)</button>
+      <button type="button" class="journal-filter-btn" data-filter="fashion-project">Dự Án Thời Trang</button>
+      <button type="button" class="journal-filter-btn" data-filter="tech-ecommerce">TMĐT & Công Nghệ</button>
+      <button type="button" class="journal-filter-btn" data-filter="teamwork-communication">Bài Tập Nhóm & Giao Tiếp</button>
+      <button type="button" class="journal-filter-btn" data-filter="skills-english">Kỹ Năng & Tiếng Anh</button>
+    </nav>
+
+    <!-- Journal Cards Grid -->
+    <div class="journal-grid" id="journalCardsGrid">
+
+      <!-- Bài 01 -->
+      <article class="journal-card" data-category="fashion-project">
+        <div class="journal-card-media" onclick="openJournalArticleModal('jnl-1')">
+          <img src="assets/images/journal_studio_desk.jpg" alt="Hành trình xây dựng ý tưởng & thiết kế giao diện Thanh Lam Luxury" loading="lazy">
+          <span class="journal-card-tag">PROJECT & UI/UX DESIGN</span>
+        </div>
+        <div class="journal-card-body">
+          <div class="journal-meta-row">
+            <span>24 THÁNG 09, 2026</span>
+            <span>6 PHÚT ĐỌC</span>
+          </div>
+          <h2 class="journal-title" onclick="openJournalArticleModal('jnl-1')">
+            Hành trình xây dựng ý tưởng & thiết kế giao diện Thanh Lam Luxury
+          </h2>
+          <p class="journal-excerpt">
+            Từ những buổi nghiên cứu xu hướng Thương mại điện tử cao cấp đến việc lựa chọn bảng màu be-nâu tự nhiên, xây dựng bản sắc Quiet Luxury và trực quan hóa trải nghiệm khách hàng.
+          </p>
+          <button type="button" class="journal-read-link" onclick="openJournalArticleModal('jnl-1')">
+            ĐỌC TOÀN VĂN &rarr;
+          </button>
+        </div>
+      </article>
+
+      <!-- Bài 02 -->
+      <article class="journal-card" data-category="teamwork-communication">
+        <div class="journal-card-media" onclick="openJournalArticleModal('jnl-2')">
+          <img src="assets/images/col_garment_rack.jpg" alt="Bài học từ làm việc nhóm và thuyết trình giảng đường" loading="lazy">
+          <span class="journal-card-tag">TEAMWORK & PRESENTATION</span>
+        </div>
+        <div class="journal-card-body">
+          <div class="journal-meta-row">
+            <span>18 THÁNG 09, 2026</span>
+            <span>5 PHÚT ĐỌC</span>
+          </div>
+          <h2 class="journal-title" onclick="openJournalArticleModal('jnl-2')">
+            Bài học từ làm việc nhóm, phân chia công việc và thuyết trình giảng đường
+          </h2>
+          <p class="journal-excerpt">
+            Cách lắng nghe ý kiến của từng thành viên, phân chia vai trò rõ ràng theo thế mạnh và sự chuyển mình từ một sinh viên rụt rè sang người tự tin làm chủ sân khấu thuyết trình.
+          </p>
+          <button type="button" class="journal-read-link" onclick="openJournalArticleModal('jnl-2')">
+            ĐỌC TOÀN VĂN &rarr;
+          </button>
+        </div>
+      </article>
+
+      <!-- Bài 03 -->
+      <article class="journal-card" data-category="teamwork-communication">
+        <div class="journal-card-media" onclick="openJournalArticleModal('jnl-3')">
+          <img src="assets/images/col_portrait_natural.jpg" alt="Phân tích tình huống giao tiếp trong kinh doanh" loading="lazy">
+          <span class="journal-card-tag">BUSINESS COMMUNICATION</span>
+        </div>
+        <div class="journal-card-body">
+          <div class="journal-meta-row">
+            <span>10 THÁNG 09, 2026</span>
+            <span>5 PHÚT ĐỌC</span>
+          </div>
+          <h2 class="journal-title" onclick="openJournalArticleModal('jnl-3')">
+            Phân tích tình huống giao tiếp trong kinh doanh & trải nghiệm khách hàng cao cấp
+          </h2>
+          <p class="journal-excerpt">
+            Phân tích các tình huống xử lý phản hồi khách hàng trong môi trường bán lẻ thời trang cao cấp. Nghệ thuật thấu cảm, giao tiếp phi ngôn ngữ và xây dựng lòng trung thành thương hiệu.
+          </p>
+          <button type="button" class="journal-read-link" onclick="openJournalArticleModal('jnl-3')">
+            ĐỌC TOÀN VĂN &rarr;
+          </button>
+        </div>
+      </article>
+
+      <!-- Bài 04 -->
+      <article class="journal-card" data-category="tech-ecommerce">
+        <div class="journal-card-media" onclick="openJournalArticleModal('jnl-4')">
+          <img src="assets/images/col_look2_olive_blazer.jpg" alt="Ứng dụng công nghệ và tư duy TMĐT trong thời trang" loading="lazy">
+          <span class="journal-card-tag">TECHNOLOGY & E-COMMERCE</span>
+        </div>
+        <div class="journal-card-body">
+          <div class="journal-meta-row">
+            <span>02 THÁNG 09, 2026</span>
+            <span>7 PHÚT ĐỌC</span>
+          </div>
+          <h2 class="journal-title" onclick="openJournalArticleModal('jnl-4')">
+            Ứng dụng công nghệ và tư duy thương mại điện tử trong ngành thời trang hiện đại
+          </h2>
+          <p class="journal-excerpt">
+            Tận dụng chuyển đổi số, tối ưu hóa hành trình mua sắm trên thiết bị di động, kiến trúc dữ liệu và nghệ thuật kể chuyện thị giác (Visual Storytelling) trong thương mại điện tử xa xỉ.
+          </p>
+          <button type="button" class="journal-read-link" onclick="openJournalArticleModal('jnl-4')">
+            ĐỌC TOÀN VĂN &rarr;
+          </button>
+        </div>
+      </article>
+
+      <!-- Bài 05 -->
+      <article class="journal-card" data-category="skills-english">
+        <div class="journal-card-media" onclick="openJournalArticleModal('jnl-5')">
+          <img src="assets/images/thanhlam_portrait_white.jpg" alt="Hành trình trau dồi tiếng Anh của Thanh Lam" loading="lazy">
+          <span class="journal-card-tag">LANGUAGE & SELF-GROWTH</span>
+        </div>
+        <div class="journal-card-body">
+          <div class="journal-meta-row">
+            <span>25 THÁNG 08, 2026</span>
+            <span>5 PHÚT ĐỌC</span>
+          </div>
+          <h2 class="journal-title" onclick="openJournalArticleModal('jnl-5')">
+            Hành trình trau dồi tiếng Anh: Vượt qua sự rụt rè để tự tin hơn mỗi ngày
+          </h2>
+          <p class="journal-excerpt">
+            Từng là một cô sinh viên e ngại khi phải nói tiếng Anh trước đám đông, tôi đã tìm ra phương pháp học qua tài liệu chuyên ngành thời trang - kinh doanh quốc tế và rèn luyện sự tự tin ra sao.
+          </p>
+          <button type="button" class="journal-read-link" onclick="openJournalArticleModal('jnl-5')">
+            ĐỌC TOÀN VĂN &rarr;
+          </button>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Project Milestones Section -->
+    <section class="milestones-wrapper">
+      <div class="milestones-header">
+        <span class="subpage-tag">DÒNG THỜI GIAN ĐỒ ÁN / PROJECT ROADMAP</span>
+        <h2 class="font-serif" style="font-size: 2.2rem; line-height: 1.25; margin-bottom: 0.75rem;">
+          5 GIAI ĐOẠN THỰC HIỆN ĐỒ ÁN
+        </h2>
+        <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.7;">
+          Quy trình hiện thực hóa ý tưởng đồ án website thời trang Thanh Lam Luxury qua từng chặng đường học tập và nghiên cứu thực tế.
+        </p>
+      </div>
+
+      <div class="milestones-grid">
+        
+        <div class="milestone-item">
+          <div class="milestone-top">
+            <span class="milestone-step">01</span>
+            <span class="milestone-phase">GIAI ĐOẠN 01</span>
+          </div>
+          <div class="milestone-time">Tháng 07 / 2026</div>
+          <h3 class="milestone-title">Khảo Sát Thị Trường & Định Vị</h3>
+          <p class="milestone-desc">
+            Nghiên cứu thị trường thời trang thiết kế nữ tại Việt Nam; phân tích xu hướng Quiet Luxury & Haute Couture; xác định chân dung khách hàng mục tiêu.
+          </p>
+        </div>
+
+        <div class="milestone-item">
+          <div class="milestone-top">
+            <span class="milestone-step">02</span>
+            <span class="milestone-phase">GIAI ĐOẠN 02</span>
+          </div>
+          <div class="milestone-time">Tháng 08 / 2026</div>
+          <h3 class="milestone-title">Lập Kế Hoạch & Kiến Trúc Thông Tin</h3>
+          <p class="milestone-desc">
+            Xây dựng Sitemap hoàn chỉnh gồm 6 phân hệ; phác thảo Wireframe bố cục Editorial; phân bổ công việc nhóm và lập tiến độ chi tiết.
+          </p>
+        </div>
+
+        <div class="milestone-item">
+          <div class="milestone-top">
+            <span class="milestone-step">03</span>
+            <span class="milestone-phase">GIAI ĐOẠN 03</span>
+          </div>
+          <div class="milestone-time">Cuối Tháng 08 / 2026</div>
+          <h3 class="milestone-title">Bản Sắc Thị Giác & Nội Dung</h3>
+          <p class="milestone-desc">
+            Lựa chọn bảng màu trung tính nhã nhặn; thiết lập hệ thống Typography Cormorant & Playfair; biên soạn hồ sơ giới thiệu cá nhân và tư liệu đồ án.
+          </p>
+        </div>
+
+        <div class="milestone-item">
+          <div class="milestone-top">
+            <span class="milestone-step">04</span>
+            <span class="milestone-phase">GIAI ĐOẠN 04</span>
+          </div>
+          <div class="milestone-time">Đầu Tháng 09 / 2026</div>
+          <h3 class="milestone-title">Lập Trình & Tối Ưu Tương Tác</h3>
+          <p class="milestone-desc">
+            Triển khai mã nguồn HTML5, CSS3 Grid và Vanilla JavaScript; tích hợp bộ lọc bài viết, modal đọc toàn văn, form liên hệ và LocalStorage.
+          </p>
+        </div>
+
+        <div class="milestone-item">
+          <div class="milestone-top">
+            <span class="milestone-step">05</span>
+            <span class="milestone-phase">GIAI ĐOẠN 05</span>
+          </div>
+          <div class="milestone-time">Tháng 09 / 2026</div>
+          <h3 class="milestone-title">Kiểm Thử, Hoàn Thiện & Báo Cáo</h3>
+          <p class="milestone-desc">
+            Kiểm tra Responsive trên Desktop, Tablet, Mobile; tổng kết bài học kinh nghiệm trong nhật ký; hoàn thành slide thuyết trình trước giảng đường.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Editorial Modal Backdrop for Full Article Reading -->
+  <div class="editorial-modal-backdrop" id="editorialModal" role="dialog" aria-modal="true" aria-label="Xem chi tiết bài viết">
+    <div class="editorial-modal-card">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Đóng cửa sổ">&times;</button>
+      <div id="modalDynamicContent"></div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Message -->
+  <div class="toast-msg" id="toastMsg" role="status" aria-live="polite"></div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-brand-side">
+      <span class="footer-logo">THANH LAM</span>
+      <span class="footer-sub">Portfolio Thời trang Nữ Độc lập & Đồ án Sinh viên</span>
+    </div>
+
+    <nav class="footer-nav">
+      <a href="index.html">TRANG CHỦ</a>
+      <a href="collection.html">BỘ SƯU TẬP</a>
+      <a href="lookbook.html">LOOKBOOK</a>
+      <a href="projects.html">DỰ ÁN</a>
+      <a href="about.html">VỀ TÔI</a>
+      <a href="journal.html">NHẬT KÝ</a>
+      <a href="contact.html">LIÊN HỆ</a>
+    </nav>
+
+    <div class="footer-right">
+      <div class="footer-socials">
+        <a href="https://instagram.com" target="_blank" rel="noopener" class="footer-social-link">IG</a>
+        <a href="https://tiktok.com" target="_blank" rel="noopener" class="footer-social-link">TT</a>
+        <a href="https://facebook.com" target="_blank" rel="noopener" class="footer-social-link">FB</a>
+        <a href="https://behance.net" target="_blank" rel="noopener" class="footer-social-link">BE</a>
+      </div>
+      <span class="footer-copy">&copy; 2026 THANH LAM. Bảo lưu mọi quyền.</span>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

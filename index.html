@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>THANH LAM — Portfolio Thương hiệu Thời trang Nữ Độc lập</title>
+  <meta name="description" content="Thanh Lam — Thương hiệu thời trang nữ độc lập tôn vinh phom dáng, chất liệu tự nhiên và sự sang trọng thầm lặng. Tuyển tập Lookbook và hồ sơ sáng tạo nghệ thuật.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' font-family='serif'>TL</text></svg>">
+</head>
+<body>
+
+  <!-- ========================================================================
+       Site Header (Đầu trang)
+       ======================================================================== -->
+  <header class="site-header">
+    <a href="index.html" class="header-logo">
+      THANH LAM
+      <span class="brand-sub">Thương hiệu thời trang độc lập</span>
+    </a>
+
+    <nav class="header-nav">
+      <a href="index.html" class="nav-link active">Trang Chủ</a>
+      <a href="collection.html" class="nav-link">Bộ Sưu Tập</a>
+      <a href="lookbook.html" class="nav-link">Lookbook</a>
+      <a href="projects.html" class="nav-link">Dự Án</a>
+      <a href="about.html" class="nav-link">Về Tôi</a>
+      <a href="journal.html" class="nav-link">Nhật Ký</a>
+      <a href="contact.html" class="nav-link">Liên Hệ</a>
+    </nav>
+
+    <div class="header-actions">
+      <a href="https://instagram.com" target="_blank" rel="noopener" class="social-pill">IG</a>
+      <a href="https://tiktok.com" target="_blank" rel="noopener" class="social-pill">TT</a>
+      <button class="mobile-menu-btn" id="openMenuBtn" aria-label="Mở menu điều hướng">MENU</button>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-nav-overlay" id="mobileOverlay"></div>
+  <aside class="mobile-drawer" id="mobileDrawer">
+    <button class="drawer-close" id="closeMenuBtn" aria-label="Đóng menu">&times;</button>
+    
+    <nav class="drawer-links">
+      <a href="index.html" class="drawer-link">01. Trang Chủ</a>
+      <a href="collection.html" class="drawer-link">02. Bộ Sưu Tập</a>
+      <a href="lookbook.html" class="drawer-link">03. Lookbook</a>
+      <a href="projects.html" class="drawer-link">04. Dự Án</a>
+      <a href="about.html" class="drawer-link">05. Về Tôi</a>
+      <a href="journal.html" class="drawer-link">06. Nhật Ký</a>
+      <a href="contact.html" class="drawer-link">07. Liên Hệ</a>
+    </nav>
+
+    <div class="drawer-footer">
+      <p class="font-serif italic" style="color: var(--text-muted); font-size: 0.95rem;">
+        &ldquo;Sự giản đơn là một hình thái của tự do.&rdquo;
+      </p>
+      <div style="display: flex; gap: 1.25rem; font-size: 0.8rem; margin-top: 0.5rem;">
+        <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://tiktok.com" target="_blank" rel="noopener">TikTok</a>
+        <a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ========================================================================
+       Master Editorial Container (Bố cục Editorial Trang Chủ)
+       ======================================================================== -->
+  <main class="editorial-container">
+
+    <!-- ----------------------------------------------------------------------
+         HÀNG 1: HERO & MOODBOARD COLLAGE
+         ---------------------------------------------------------------------- -->
+    <section class="hero-editorial-row" id="hero">
+      
+      <!-- Khung 1: Ảnh chân dung Hero chính -->
+      <article class="hero-portrait-card">
+        <img src="assets/images/hero_portrait.jpg" alt="Thanh Lam Editorial Portrait: Independent Fashion Brand" loading="eager">
+        <h1 class="sr-only">THANH LAM — Thương hiệu thời trang độc lập. Trang phục, bản sắc thị giác và sự tự do biểu đạt.</h1>
+        <a href="#collection" class="hero-scroll-hitbox" aria-label="Cuộn để khám phá bộ sưu tập"></a>
+      </article>
+
+      <!-- Khung 2: Đầm maxi lụa linen & Tuyên ngôn tự do -->
+      <article class="hero-dress-card">
+        <img src="assets/images/hero_model_dress.jpg" alt="Thanh Lam Slip Dress SS26: Simplicity is a form of freedom" loading="eager">
+        <span class="sr-only">Sự giản đơn là một hình thái của tự do</span>
+      </article>
+
+      <!-- Khung 3: Hai ảnh cận cảnh chi tiết chất liệu -->
+      <div class="hero-stacked-details">
+        <article class="detail-card" data-detail="collar" onclick="openPieceModal('look3')" title="Xem chi tiết: Cổ áo sơ mi & dây chuyền thanh mảnh">
+          <img src="assets/images/detail_collar.jpg" alt="Chi tiết: Cổ áo sơ mi dệt thô và mặt dây chuyền tinh tế" loading="eager">
+        </article>
+        <article class="detail-card" data-detail="fabric" onclick="openPieceModal('look1')" title="Xem chi tiết: Thớ vải linen dệt mộc nhăn tự nhiên">
+          <img src="assets/images/detail_fabric_raw.jpg" alt="Chi tiết: Bề mặt vải linen thô dệt thủ công" loading="eager">
+        </article>
+      </div>
+
+      <!-- Khung 4: Người mẫu mặc sơ mi rêu dạo bước bên tường đá nắng -->
+      <article class="hero-walk-card" onclick="openPieceModal('look2')" title="Xem chi tiết: Sơ mi linen màu rêu mộc">
+        <img src="assets/images/hero_green_walk.jpg" alt="Áo sơ mi linen màu rêu của Thanh Lam dưới nắng tự nhiên" loading="eager">
+      </article>
+
+    </section>
+
+    <!-- ----------------------------------------------------------------------
+         TUYÊN NGÔN THƯƠNG HIỆU (MANIFESTO)
+         ---------------------------------------------------------------------- -->
+    <section style="padding: 3.5rem 1rem 4rem; text-align: center; max-width: 880px; margin: 0 auto;">
+      <p class="font-serif italic" style="font-size: 1.1rem; letter-spacing: 0.18em; color: var(--accent); margin-bottom: 0.75rem;">
+        TUYÊN NGÔN SÁNG TÁC
+      </p>
+      <h2 class="font-serif" style="font-size: clamp(2rem, 3.8vw, 3rem); font-weight: 400; letter-spacing: 0.08em; line-height: 1.25; margin-bottom: 1.5rem;">
+        SỰ GIẢN ĐƠN LÀ MỘT HÌNH THÁI CỦA TỰ DO.
+      </h2>
+      <p style="font-size: 0.98rem; line-height: 1.85; color: var(--text-muted); font-weight: 300;">
+        Thanh Lam sinh ra từ mong muốn tìm lại sự thuần khiết trong từng chuyển động. Chúng tôi không thiết kế quần áo để chạy theo guồng quay xu hướng ngắn ngủi, mà kiến tạo những phom dáng tĩnh lặng, tôn vinh vẻ đẹp tự nhiên và giải phóng cảm xúc cá nhân qua các chất liệu thô mộc như linen, lụa tơ tằm và cotton hữu cơ.
+      </p>
+    </section>
+
+    <!-- ----------------------------------------------------------------------
+         HÀNG 2: BỘ SƯU TẬP 01 / HÌNH DÁNG (SS 2026) & CỘT CHẤT LIỆU
+         ---------------------------------------------------------------------- -->
+    <section class="collection-editorial-row" id="collection">
+      
+      <!-- Nhóm 3 ảnh nhỏ: 3 mẫu thiết kế tiêu biểu -->
+      <div class="mini-looks-group">
+        <div class="mini-look-card" onclick="openPieceModal('look1')" title="Xem chi tiết: Look 01 Quần xếp ly ống rộng & Áo lụa">
+          <img src="assets/images/col_look1_black_pant.jpg" alt="Look 01: Quần ống rộng xếp ly sâu và áo hai dây lụa">
+        </div>
+        <div class="mini-look-card" onclick="openPieceModal('look2')" title="Xem chi tiết: Look 02 Áo Blazer linen thô màu rêu">
+          <img src="assets/images/col_look2_olive_blazer.jpg" alt="Look 02: Áo khoác Blazer linen thô giải cấu trúc">
+        </div>
+        <div class="mini-look-card" onclick="openPieceModal('look3')" title="Xem chi tiết: Look 03 Áo sơ mi poplin phom rộng">
+          <img src="assets/images/col_look3_hair_clip.jpg" alt="Look 03: Áo sơ mi poplin mộc cài hoa sau gáy">
+        </div>
+      </div>
+
+      <!-- Khối chữ Editorial: 01 / FORM -->
+      <div class="col-text-block">
+        <h3 class="col-num">01 / FORM</h3>
+        <span class="col-season">XUÂN / HÈ 2026</span>
+        <p class="col-statement">
+          Nghiên cứu về phom dáng, chuyển động và bản sắc thường nhật.
+        </p>
+        <a href="collection.html" class="editorial-btn" style="margin-top: 1.25rem;">
+          KHÁM PHÁ BỘ SƯU TẬP &rarr;
+        </a>
+      </div>
+
+      <!-- Ảnh góc rộng: Người mẫu ngồi trên bậc bê tông -->
+      <div class="col-wide-photo" onclick="openPieceModal('wide')" title="Xem chi tiết: Bộ suit hai mảnh kiến trúc">
+        <img src="assets/images/col_form_concrete_steps.jpg" alt="Thanh Lam Form SS26 trên bậc thềm bê tông">
+      </div>
+
+      <!-- Ảnh chân dung tự nhiên -->
+      <div class="col-portrait-photo" onclick="openPieceModal('portrait')" title="Chân dung nàng thơ Thanh Lam">
+        <img src="assets/images/col_portrait_natural.jpg" alt="Chân dung editorial vẻ đẹp tự nhiên Thanh Lam">
+      </div>
+
+      <!-- Ảnh giá treo đồ tự nhiên -->
+      <div class="col-rack-photo" onclick="openPieceModal('rack')" title="Dải màu chất liệu tự nhiên">
+        <img src="assets/images/col_garment_rack.jpg" alt="Giá treo trang phục chất liệu tự nhiên Thanh Lam">
+      </div>
+
+      <!-- Cột chữ giá trị cốt lõi -->
+      <div class="col-pillar-text">
+        <p class="pillar-item">CHẤT LIỆU TỰ NHIÊN</p>
+        <p class="pillar-item">PHOM DÁNG TRƯỜNG TỒN</p>
+        <p class="pillar-item">SANG TRỌNG THẦM LẶNG</p>
+        <div class="pillar-line"></div>
+      </div>
+
+    </section>
+
+    <!-- ----------------------------------------------------------------------
+         HÀNG 3: LOOKBOOK, NHẬT KÝ & DỰ ÁN
+         ---------------------------------------------------------------------- -->
+    <section class="editorial-row-3" id="lookbook">
+      
+      <!-- Thẻ 1: THE LOOKBOOK Banner -->
+      <a href="lookbook.html" class="lookbook-banner-card" title="Mở trang Lookbook tạp chí số" aria-label="Mở trang Lookbook">
+        <img src="assets/images/lookbook_balcony_sunset.jpg" alt="Lookbook Thanh Lam: Hoàng hôn bên ban công thành phố cổ">
+        <span class="sr-only">THE LOOKBOOK — Những khoảnh khắc, cảm xúc và vẻ đẹp đời thường.</span>
+      </a>
+
+      <!-- Thẻ 2: THE JOURNAL -->
+      <a href="journal.html" class="journal-split-card" id="journal" title="Mở trang Nhật ký sáng tác">
+        <div class="journal-text-side">
+          <h2 class="journal-heading">NHẬT KÝ<br>SÁNG TÁC</h2>
+          <p class="journal-sub">Những câu chuyện phía sau bộ sưu tập, chất liệu và quá trình tạo tác.</p>
+          <div class="journal-line"></div>
+        </div>
+        <div class="journal-photo-side">
+          <img src="assets/images/journal_studio_desk.jpg" alt="Bàn làm việc xưởng thiết kế với mẫu rập và thớ vải linen">
+        </div>
+      </a>
+
+      <!-- Thẻ 3: DỰ ÁN TIÊU BIỂU -->
+      <a href="projects.html" class="project-banner-card" id="projects" title="Mở trang kho lưu trữ Dự án" aria-label="Mở trang Dự Án">
+        <img src="assets/images/project_concrete_walk.jpg" alt="Tuyển tập dự án thời trang Thanh Lam: Ý niệm, chiến dịch và hợp tác sáng tạo">
+        <span class="sr-only">DỰ ÁN — Ý niệm, chiến dịch hình ảnh và hợp tác sáng tạo nghệ thuật.</span>
+      </a>
+
+      <!-- Thẻ 4: Chi tiết lưng trần đầm lụa -->
+      <article class="shoulder-photo-card" onclick="openPieceModal('shoulder')" title="Chi tiết đầm lụa tơ tằm hai dây khoét lưng">
+        <img src="assets/images/detail_bare_shoulder.jpg" alt="Chi tiết bờ vai và lưng trần đầm lụa tơ tằm">
+      </article>
+
+    </section>
+
+    <!-- ----------------------------------------------------------------------
+         HÀNG 4: VỀ TÔI, TRÍCH DẪN & LIÊN HỆ
+         ---------------------------------------------------------------------- -->
+    <section class="editorial-row-4" id="about">
+      
+      <!-- Cột 1: Về tôi (Text + 2 Ảnh xưởng may) -->
+      <div class="about-composite-card">
+        <div class="about-text-col">
+          <h2 class="about-label">VỀ TÔI</h2>
+          <p class="about-sublabel">Sinh viên & Tác giả đồ án Thanh Lam Luxury.</p>
+          <a href="about.html" class="editorial-btn" style="margin-top: 0.5rem; font-size: 0.7rem;">
+            ĐỌC CÂU CHUYỆN &rarr;
+          </a>
+        </div>
+        <a href="about.html" class="about-photo-card" title="Chân dung Nguyễn Thị Thanh Lam — Phong cách tinh khôi">
+          <img src="assets/images/thanhlam_portrait_white.jpg" alt="Chân dung Nguyễn Thị Thanh Lam váy trắng">
+        </a>
+        <a href="about.html" class="about-photo-card" title="Chân dung Nguyễn Thị Thanh Lam — Đầm dạ hội Quiet Luxury">
+          <img src="assets/images/thanhlam_portrait_gold.jpg" alt="Chân dung Nguyễn Thị Thanh Lam đầm dạ hội">
+        </a>
+      </div>
+
+      <!-- Cột 2: Trích dẫn nghệ thuật lớn -->
+      <div class="quote-editorial-card">
+        <blockquote class="quote-editorial-text">
+          &ldquo;Mỗi nỗ lực nhỏ hôm nay đều là nền móng vững chắc cho sự tự tin và thành công ngày mai.&rdquo;
+        </blockquote>
+        <cite class="quote-author">NGUYỄN THỊ THANH LAM</cite>
+        <div class="quote-line"></div>
+      </div>
+
+      <!-- Cột 3: Khối Liên hệ -->
+      <div class="contact-editorial-card" id="contact">
+        <h2 class="contact-headline">CÙNG NHAU SÁNG TẠO.</h2>
+        
+        <div class="contact-content-split">
+          <!-- Mạng xã hội -->
+          <div class="contact-social-list">
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="social-item-row">
+              <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+              <span>Instagram</span>
+            </a>
+            
+            <a href="https://tiktok.com" target="_blank" rel="noopener" class="social-item-row">
+              <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
+              </svg>
+              <span>TikTok</span>
+            </a>
+
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="social-item-row">
+              <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+              <span>Facebook</span>
+            </a>
+
+            <a href="mailto:studio@thanhlam.vn" class="social-item-row">
+              <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <span>Email Studio</span>
+            </a>
+          </div>
+
+          <!-- Form liên hệ tối giản -->
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <input type="text" class="form-input" id="userName" placeholder="Họ và tên" required autocomplete="name">
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-input" id="userEmail" placeholder="Địa chỉ Email" required autocomplete="email">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-input" id="userMsg" placeholder="Lời nhắn của bạn" required>
+            </div>
+            <div class="form-submit-row">
+              <button type="submit" class="send-btn">
+                GỬI LỜI NHẮN <span>&rarr;</span>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ========================================================================
+       Editorial Footer (Chân trang)
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="footer-brand-side">
+      <span class="footer-logo">THANH LAM</span>
+      <span class="footer-sub">Portfolio Thời trang Nữ Độc lập</span>
+    </div>
+
+    <nav class="footer-nav">
+      <a href="index.html">TRANG CHỦ</a>
+      <a href="collection.html">BỘ SƯU TẬP</a>
+      <a href="lookbook.html">LOOKBOOK</a>
+      <a href="projects.html">DỰ ÁN</a>
+      <a href="about.html">VỀ TÔI</a>
+      <a href="journal.html">NHẬT KÝ</a>
+      <a href="contact.html">LIÊN HỆ</a>
+    </nav>
+
+    <div class="footer-right">
+      <div class="footer-socials">
+        <a href="https://instagram.com" target="_blank" rel="noopener" class="footer-social-link">IG</a>
+        <a href="https://tiktok.com" target="_blank" rel="noopener" class="footer-social-link">TT</a>
+        <a href="https://facebook.com" target="_blank" rel="noopener" class="footer-social-link">FB</a>
+        <a href="https://behance.net" target="_blank" rel="noopener" class="footer-social-link">BE</a>
+      </div>
+      <span class="footer-copy">&copy; 2026 THANH LAM. Bảo lưu mọi quyền.</span>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       Interactive Modals (Xem chi tiết thiết kế)
+       ======================================================================== -->
+  <div class="editorial-modal-backdrop" id="editorialModal">
+    <div class="editorial-modal-card">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Đóng cửa sổ">&times;</button>
+      <div id="modalDynamicContent"></div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast-msg" id="toastMsg">
+    Cảm ơn bạn đã liên hệ. Thanh Lam Studio sẽ phản hồi sớm nhất qua email.
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

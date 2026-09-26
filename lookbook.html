@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LOOKBOOK — THANH LAM Portfolio Thời trang Độc lập</title>
+  <meta name="description" content="Tập ảnh thời trang kỹ thuật số (Digital Lookbook) của Thanh Lam. Bố cục editorial bất đối xứng ghi lại vẻ đẹp tĩnh lặng và tự nhiên.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' font-family='serif'>TL</text></svg>">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <a href="index.html" class="header-logo">
+      THANH LAM
+      <span class="brand-sub">Thương hiệu thời trang độc lập</span>
+    </a>
+
+    <nav class="header-nav">
+      <a href="index.html" class="nav-link">Trang Chủ</a>
+      <a href="collection.html" class="nav-link">Bộ Sưu Tập</a>
+      <a href="lookbook.html" class="nav-link active">Lookbook</a>
+      <a href="projects.html" class="nav-link">Dự Án</a>
+      <a href="about.html" class="nav-link">Về Tôi</a>
+      <a href="journal.html" class="nav-link">Nhật Ký</a>
+      <a href="contact.html" class="nav-link">Liên Hệ</a>
+    </nav>
+
+    <div class="header-actions">
+      <a href="https://instagram.com" target="_blank" rel="noopener" class="social-pill">IG</a>
+      <a href="https://tiktok.com" target="_blank" rel="noopener" class="social-pill">TT</a>
+      <button class="mobile-menu-btn" id="openMenuBtn" aria-label="Mở menu">MENU</button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-overlay" id="mobileOverlay"></div>
+  <aside class="mobile-drawer" id="mobileDrawer">
+    <button class="drawer-close" id="closeMenuBtn" aria-label="Đóng menu">&times;</button>
+    <nav class="drawer-links">
+      <a href="index.html" class="drawer-link">01. Trang Chủ</a>
+      <a href="collection.html" class="drawer-link">02. Bộ Sưu Tập</a>
+      <a href="lookbook.html" class="drawer-link">03. Lookbook</a>
+      <a href="projects.html" class="drawer-link">04. Dự Án</a>
+      <a href="about.html" class="drawer-link">05. Về Tôi</a>
+      <a href="journal.html" class="drawer-link">06. Nhật Ký</a>
+      <a href="contact.html" class="drawer-link">07. Liên Hệ</a>
+    </nav>
+  </aside>
+
+  <!-- Subpage Hero -->
+  <header class="subpage-hero">
+    <span class="subpage-tag">TẬP ẢNH THỜI TRANG / DIGITAL LOOKBOOK</span>
+    <h1 class="subpage-title">THE LOOKBOOK</h1>
+    <p class="subpage-desc">
+      Những khoảnh khắc, cảm xúc và vẻ đẹp đời thường. Nơi trang phục hòa vào chuyển động của cơ thể và ánh sáng tự nhiên.
+    </p>
+  </header>
+
+  <!-- Main Lookbook Section -->
+  <main class="subpage-content">
+
+    <!-- Filter Bar -->
+    <div class="lookbook-filter-bar">
+      <button class="filter-btn active">TẤT CẢ (ALL)</button>
+      <button class="filter-btn">FORM / XUÂN HÈ 2026</button>
+      <button class="filter-btn">STILLNESS / THU ĐÔNG</button>
+      <button class="filter-btn">AFTER DARK</button>
+    </div>
+
+    <!-- Masonry Editorial Grid -->
+    <div class="lookbook-masonry">
+
+      <!-- Item 1 -->
+      <article class="lookbook-item" onclick="openPieceModal('look1')">
+        <img src="assets/images/lookbook_balcony_sunset.jpg" alt="Look 01: Hoàng hôn thành phố cổ">
+        <div class="lookbook-item-info">
+          <span class="subpage-tag" style="margin-bottom: 0.2rem;">LOOK 01</span>
+          <h3 class="font-serif" style="font-size: 1.25rem; margin-bottom: 0.35rem;">Hoàng hôn thành phố cổ</h3>
+          <p style="font-size: 0.82rem; color: var(--text-muted);">Đầm hai dây linen rêu buông lơi trên nền tường đá cổ.</p>
+        </div>
+      </article>
+
+      <!-- Item 2 -->
+      <article class="lookbook-item" onclick="openPieceModal('wide')">
+        <img src="assets/images/col_form_concrete_steps.jpg" alt="Look 02: Dấu ấn hình học bê tông">
+        <div class="lookbook-item-info">
+          <span class="subpage-tag" style="margin-bottom: 0.2rem;">LOOK 02</span>
+          <h3 class="font-serif" style="font-size: 1.25rem; margin-bottom: 0.35rem;">Bậc thềm kiến trúc</h3>
+          <p style="font-size: 0.82rem; color: var(--text-muted);">Bộ suit hai mảnh mộc mạc thư thái giữa không gian Brutalism.</p>
+        </div>
+      </article>
+
+      <!-- Item 3 -->
+      <article class="lookbook-item" onclick="openPieceModal('look3')">
+        <img src="assets/images/hero_model_dress.jpg" alt="Look 03: Tự do thuần khiết">
+        <div class="lookbook-item-info">
+          <span class="subpage-tag" style="margin-bottom: 0.2rem;">LOOK 03</span>
+          <h3 class="font-serif" style="font-size: 1.25rem; margin-bottom: 0.35rem;">Dáng váy tung bay</h3>
+          <p style="font-size: 0.82rem; color: var(--text-muted);">Đầm maxi linen thô mộc đón gió, giải phóng từng bước đi.</p>
+        </div>
+      </article>
+
+      <!-- Item 4 -->
+      <article class="lookbook-item" onclick="openPieceModal('look2')">
+        <img src="assets/images/hero_green_walk.jpg" alt="Look 04: Lối nhỏ rợp bóng lá">
+        <div class="lookbook-item-info">
+          <span class="subpage-tag" style="margin-bottom: 0.2rem;">LOOK 04</span>
+          <h3 class="font-serif" style="font-size: 1.25rem; margin-bottom: 0.35rem;">Nắng rọi tường đá</h3>
+          <p style="font-size: 0.82rem; color: var(--text-muted);">Sơ mi linen màu rêu mộc và túi tote vải mộc mạc.</p>
+        </div>
+      </article>
+
+      <!-- Item 5 -->
+      <article class="lookbook-item" onclick="openPieceModal('portrait')">
+        <img src="assets/images/col_portrait_natural.jpg" alt="Look 05: Ánh nhìn tĩnh lặng">
+        <div class="lookbook-item-info">
+          <span class="subpage-tag" style="margin-bottom: 0.2rem;">LOOK 05</span>
+          <h3 class="font-serif" style="font-size: 1.25rem; margin-bottom: 0.35rem;">Chân dung mộc</h3>
+          <p style="font-size: 0.82rem; color: var(--text-muted);">Trang điểm nhẹ, ánh mắt dịu dàng và nét đẹp Á Đông thuần khiết.</p>
+        </div>
+      </article>
+
+      <!-- Item 6 -->
+      <article class="lookbook-item" onclick="openPieceModal('shoulder')">
+        <img src="assets/images/detail_bare_shoulder.jpg" alt="Look 06: Chi tiết lưng trần lụa tơ tằm">
+        <div class="lookbook-item-info">
+          <span class="subpage-tag" style="margin-bottom: 0.2rem;">LOOK 06</span>
+          <h3 class="font-serif" style="font-size: 1.25rem; margin-bottom: 0.35rem;">Lụa đen bóng đêm</h3>
+          <p style="font-size: 0.82rem; color: var(--text-muted);">Đường cắt xéo canh ôm trọn đường cong bờ vai và tấm lưng thon.</p>
+        </div>
+      </article>
+
+      <!-- Item 7 -->
+      <article class="lookbook-item" onclick="openPieceModal('look1')">
+        <img src="assets/images/col_look1_black_pant.jpg" alt="Look 07: Quần ống rộng xếp ly sâu">
+        <div class="lookbook-item-info">
+          <span class="subpage-tag" style="margin-bottom: 0.2rem;">LOOK 07</span>
+          <h3 class="font-serif" style="font-size: 1.25rem; margin-bottom: 0.35rem;">Tailoring đương đại</h3>
+          <p style="font-size: 0.82rem; color: var(--text-muted);">Độ rủ mềm mại của lụa đen và nếp gấp sắc sảo của quần âu.</p>
+        </div>
+      </article>
+
+      <!-- Item 8 -->
+      <article class="lookbook-item" onclick="openPieceModal('look2')">
+        <img src="assets/images/col_look2_olive_blazer.jpg" alt="Look 08: Chi tiết khuy sừng và ve áo">
+        <div class="lookbook-item-info">
+          <span class="subpage-tag" style="margin-bottom: 0.2rem;">LOOK 08</span>
+          <h3 class="font-serif" style="font-size: 1.25rem; margin-bottom: 0.35rem;">Khuy sừng thủ công</h3>
+          <p style="font-size: 0.82rem; color: var(--text-muted);">Khuy chạm khắc tự nhiên trên nền vải sợi dệt thô màu ô-liu.</p>
+        </div>
+      </article>
+
+      <!-- Item 9 -->
+      <article class="lookbook-item" onclick="openPieceModal('look3')">
+        <img src="assets/images/col_look3_hair_clip.jpg" alt="Look 09: Cài hoa sau gáy">
+        <div class="lookbook-item-info">
+          <span class="subpage-tag" style="margin-bottom: 0.2rem;">LOOK 09</span>
+          <h3 class="font-serif" style="font-size: 1.25rem; margin-bottom: 0.35rem;">Góc nhìn sau gáy</h3>
+          <p style="font-size: 0.82rem; color: var(--text-muted);">Bó hoa dại nhỏ, kẹp tóc thô và cổ áo sơ mi poplin trắng.</p>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-brand-side">
+      <span class="footer-logo">THANH LAM</span>
+      <span class="footer-sub">Portfolio Thời trang Nữ Độc lập</span>
+    </div>
+
+    <nav class="footer-nav">
+      <a href="index.html">TRANG CHỦ</a>
+      <a href="collection.html">BỘ SƯU TẬP</a>
+      <a href="lookbook.html">LOOKBOOK</a>
+      <a href="projects.html">DỰ ÁN</a>
+      <a href="about.html">VỀ TÔI</a>
+      <a href="journal.html">NHẬT KÝ</a>
+      <a href="contact.html">LIÊN HỆ</a>
+    </nav>
+
+    <div class="footer-right">
+      <div class="footer-socials">
+        <a href="https://instagram.com" target="_blank" rel="noopener" class="footer-social-link">IG</a>
+        <a href="https://tiktok.com" target="_blank" rel="noopener" class="footer-social-link">TT</a>
+        <a href="https://facebook.com" target="_blank" rel="noopener" class="footer-social-link">FB</a>
+        <a href="https://behance.net" target="_blank" rel="noopener" class="footer-social-link">BE</a>
+      </div>
+      <span class="footer-copy">&copy; 2026 THANH LAM. Bảo lưu mọi quyền.</span>
+    </div>
+  </footer>
+
+  <!-- Modal for piece details -->
+  <div class="editorial-modal-backdrop" id="editorialModal">
+    <div class="editorial-modal-card">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Đóng cửa sổ">&times;</button>
+      <div id="modalDynamicContent"></div>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CHI TIẾT THIẾT KẾ — THANH LAM Fashion Portfolio</title>
+  <meta name="description" content="Chi tiết cấu trúc may đo, chất liệu tự nhiên và ý niệm thiết kế của từng tác phẩm trong bộ sưu tập Thanh Lam.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' font-family='serif'>TL</text></svg>">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <a href="index.html" class="header-logo">
+      THANH LAM
+      <span class="brand-sub">Thương hiệu thời trang độc lập</span>
+    </a>
+
+    <nav class="header-nav">
+      <a href="index.html" class="nav-link">Trang Chủ</a>
+      <a href="collection.html" class="nav-link active">Bộ Sưu Tập</a>
+      <a href="lookbook.html" class="nav-link">Lookbook</a>
+      <a href="projects.html" class="nav-link">Dự Án</a>
+      <a href="about.html" class="nav-link">Về Tôi</a>
+      <a href="journal.html" class="nav-link">Nhật Ký</a>
+      <a href="contact.html" class="nav-link">Liên Hệ</a>
+    </nav>
+
+    <div class="header-actions">
+      <a href="https://instagram.com" target="_blank" rel="noopener" class="social-pill">IG</a>
+      <a href="https://tiktok.com" target="_blank" rel="noopener" class="social-pill">TT</a>
+      <button class="mobile-menu-btn" id="openMenuBtn" aria-label="Mở menu">MENU</button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-overlay" id="mobileOverlay"></div>
+  <aside class="mobile-drawer" id="mobileDrawer">
+    <button class="drawer-close" id="closeMenuBtn" aria-label="Đóng menu">&times;</button>
+    <nav class="drawer-links">
+      <a href="index.html" class="drawer-link">01. Trang Chủ</a>
+      <a href="collection.html" class="drawer-link">02. Bộ Sưu Tập</a>
+      <a href="lookbook.html" class="drawer-link">03. Lookbook</a>
+      <a href="projects.html" class="drawer-link">04. Dự Án</a>
+      <a href="about.html" class="drawer-link">05. Về Tôi</a>
+      <a href="journal.html" class="drawer-link">06. Nhật Ký</a>
+      <a href="contact.html" class="drawer-link">07. Liên Hệ</a>
+    </nav>
+  </aside>
+
+  <!-- Subpage Hero / Breadcrumbs -->
+  <header class="subpage-hero" style="padding-bottom: 2rem;">
+    <a href="collection.html" style="display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem;">
+      &larr; QUAY LẠI BỘ SƯU TẬP
+    </a>
+    <span class="subpage-tag" id="pieceColTag">01 / FORM &bull; XUÂN / HÈ 2026</span>
+    <h1 class="subpage-title" id="pieceTitle">QUẦN ỐNG RỘNG XẾP LY & ÁO LỤA HAI DÂY</h1>
+  </header>
+
+  <!-- Main Piece Detail Section -->
+  <main class="subpage-content">
+    <div class="piece-detail-grid">
+
+      <!-- Gallery Column -->
+      <div class="piece-gallery-column">
+        <div style="background: #E5E1D6; overflow: hidden;">
+          <img id="pieceMainImg" src="assets/images/col_look1_black_pant.jpg" alt="Chi tiết thiết kế Thanh Lam" style="max-height: 650px; object-fit: cover;">
+        </div>
+        
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem;">
+          <div style="background: #E5E1D6; overflow: hidden;">
+            <img id="pieceDetailImg1" src="assets/images/detail_collar.jpg" alt="Chi tiết phụ 1">
+          </div>
+          <div style="background: #E5E1D6; overflow: hidden;">
+            <img id="pieceDetailImg2" src="assets/images/detail_fabric_raw.jpg" alt="Chi tiết thớ vải">
+          </div>
+        </div>
+      </div>
+
+      <!-- Specs & Concept Column -->
+      <div style="display: flex; flex-direction: column; gap: 1.5rem; position: sticky; top: 7rem;">
+        
+        <div style="border-bottom: 1px solid var(--neutral-border); padding-bottom: 1.5rem;">
+          <span style="font-family: var(--font-serif); font-size: 1.4rem; color: var(--accent); letter-spacing: 0.15em;" id="pieceNum">
+            MÃ THIẾT KẾ: 01
+          </span>
+          <p class="font-serif italic" style="font-size: 1.2rem; color: var(--text-primary); margin-top: 0.5rem; line-height: 1.4;" id="pieceSubtitle">
+            Sự cân bằng hoàn hảo giữa độ rủ tự nhiên của tơ tằm và cấu trúc may đo nam tính.
+          </p>
+        </div>
+
+        <!-- Specifications Table (Zero e-commerce) -->
+        <table class="piece-specs-table">
+          <tbody>
+            <tr>
+              <td>CHẤT LIỆU</td>
+              <td id="pieceMaterial">100% Lụa Tơ Tằm Mulberry Tự Nhiên & Vải Linen Thô Giặt Mềm</td>
+            </tr>
+            <tr>
+              <td>MÀU SẮC</td>
+              <td id="pieceColor">Trắng Ngà Tự Nhiên & Đen Khói (Chalk & Obsidian)</td>
+            </tr>
+            <tr>
+              <td>PHOM DÁNG</td>
+              <td id="pieceFit">Cạp cao, xếp hai nếp ly sâu phía trước, ống rộng buông rủ giải phóng chuyển động</td>
+            </tr>
+            <tr>
+              <td>NĂM SÁNG TÁC</td>
+              <td id="pieceYear">2026</td>
+            </tr>
+            <tr>
+              <td>KỸ THUẬT MAY</td>
+              <td id="pieceTailoring">Giấu đường may (French seams), khuy xà cừ tự nhiên đính tay thủ công</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- Design Concept Narrative -->
+        <div>
+          <span class="subpage-tag" style="margin-bottom: 0.35rem;">Ý NIỆM THIẾT KẾ / DESIGN CONCEPT</span>
+          <p class="font-serif italic" style="font-size: 1.12rem; line-height: 1.75; color: var(--text-primary);" id="pieceConcept">
+            &ldquo;Sự đối lập giữa độ rủ mềm mại của lụa tơ tằm và cấu trúc xếp ly sâu kiểu tailoring nam tính. Thiết kế tạo nên sự giải phóng tối đa cho chuyển động của phụ nữ trong nhịp sống đương đại. Chúng tôi muốn người mặc cảm nhận được từng ngọn gió luồn qua thớ vải khi rảo bước trên phố.&rdquo;
+          </p>
+        </div>
+
+        <!-- Design Tags -->
+        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 0.5rem;" id="pieceTags">
+          <span style="font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; background: var(--bg-card); padding: 0.35rem 0.85rem; border: 1px solid var(--neutral-border);">Tailoring</span>
+          <span style="font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; background: var(--bg-card); padding: 0.35rem 0.85rem; border: 1px solid var(--neutral-border);">Mulberry Silk</span>
+          <span style="font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; background: var(--bg-card); padding: 0.35rem 0.85rem; border: 1px solid var(--neutral-border);">Raw Linen</span>
+        </div>
+
+        <!-- Navigation Between Pieces -->
+        <div style="display: flex; justify-content: space-between; border-top: 1px solid var(--neutral-border); padding-top: 1.5rem; margin-top: 1.5rem;">
+          <a href="piece-detail.html?piece=look3" class="editorial-btn" style="font-size: 0.72rem;">&larr; THIẾT KẾ TRƯỚC</a>
+          <a href="piece-detail.html?piece=look2" class="editorial-btn" style="font-size: 0.72rem;">THIẾT KẾ TIẾP THEO &rarr;</a>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-brand-side">
+      <span class="footer-logo">THANH LAM</span>
+      <span class="footer-sub">Portfolio Thời trang Nữ Độc lập</span>
+    </div>
+
+    <nav class="footer-nav">
+      <a href="index.html">TRANG CHỦ</a>
+      <a href="collection.html">BỘ SƯU TẬP</a>
+      <a href="lookbook.html">LOOKBOOK</a>
+      <a href="projects.html">DỰ ÁN</a>
+      <a href="about.html">VỀ TÔI</a>
+      <a href="journal.html">NHẬT KÝ</a>
+      <a href="contact.html">LIÊN HỆ</a>
+    </nav>
+
+    <div class="footer-right">
+      <div class="footer-socials">
+        <a href="https://instagram.com" target="_blank" rel="noopener" class="footer-social-link">IG</a>
+        <a href="https://tiktok.com" target="_blank" rel="noopener" class="footer-social-link">TT</a>
+        <a href="https://facebook.com" target="_blank" rel="noopener" class="footer-social-link">FB</a>
+        <a href="https://behance.net" target="_blank" rel="noopener" class="footer-social-link">BE</a>
+      </div>
+      <span class="footer-copy">&copy; 2026 THANH LAM. Bảo lưu mọi quyền.</span>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script>
+    // Dynamic query parameter hydration for piece-detail
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const pieceKey = urlParams.get('piece') || 'look1';
+      const piece = PORTFOLIO_DATA.pieces[pieceKey];
+
+      if (piece) {
+        document.title = `${piece.name} — THANH LAM Portfolio`;
+        document.getElementById('pieceTitle').textContent = piece.name;
+        document.getElementById('pieceNum').textContent = `MÃ THIẾT KẾ: ${piece.number}`;
+        document.getElementById('pieceColTag').textContent = piece.collection;
+        document.getElementById('pieceMaterial').textContent = piece.material;
+        document.getElementById('pieceColor').textContent = piece.color;
+        document.getElementById('pieceFit').textContent = piece.fit;
+        document.getElementById('pieceYear').textContent = piece.year;
+        document.getElementById('pieceConcept').textContent = `“${piece.concept}”`;
+        document.getElementById('pieceMainImg').src = piece.image;
+
+        // Tags
+        if (piece.tags && piece.tags.length > 0) {
+          const tagsContainer = document.getElementById('pieceTags');
+          tagsContainer.innerHTML = piece.tags.map(t => `<span style="font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; background: var(--bg-card); padding: 0.35rem 0.85rem; border: 1px solid var(--neutral-border);">${t}</span>`).join('');
+        }
+      }
+    });
+  </script>
+  <script src="js/main.js"></script>
+</body>
+</html>
